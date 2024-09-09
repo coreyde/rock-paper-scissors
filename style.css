@@ -1,0 +1,33 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 400px;
+  padding: 100px;
+}
+
+.rock-button,
+.paper-button,
+.scissors-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+}
+
+.rock-button img,
+.paper-button img,
+.scissors-button img {
+  width: 80px;
+  height: auto;
+}
+
+.rock-button span,
+.paper-button span,
+.scissors-button span {
+  margin-top: 20px;
+  font-size: 40px;
+  color: black;
+  text-align: center;
+}
