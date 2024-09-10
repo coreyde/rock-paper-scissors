@@ -1,13 +1,11 @@
 .button-container {
   display: flex;
   justify-content: space-between;
-  margin: 400px;
+  margin: 300px;
   padding: 100px;
 }
 
-.rock-button,
-.paper-button,
-.scissors-button {
+.game-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,16 +14,12 @@
   background-color: white;
 }
 
-.rock-button img,
-.paper-button img,
-.scissors-button img {
+.game-btn img {
   width: 80px;
   height: auto;
 }
 
-.rock-button span,
-.paper-button span,
-.scissors-button span {
+.game-btn span {
   margin-top: 20px;
   font-size: 40px;
   color: black;
