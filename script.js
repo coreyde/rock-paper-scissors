@@ -52,12 +52,28 @@ function getHumanChoice(callback) {
   });
 }
 
-function determineWinner(userChoice, computerChoice) {
-  const result = playRound(userChoice, computerChoice);
-  console.log(result);
+function disableButtons() {
+  const buttons = document.querySelectorAll(".game-btn");
+
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
 }
 
-getHumanChoice(determineWinner);
+function checkGameOver() {
+  if (humanScore === 5) {
+    disableButtons();
+    console.log("Game over! You win!");
+  } else if (computerScore === 5) {
+    disableButtons();
+    console.log("Game over! You lose!");
+  }
+}
 
-// function updateScore(getHumanChoice) {
-// if ()}
+function playGame(userChoice, computerChoice) {
+  const result = playRound(userChoice, computerChoice);
+  console.log(result);
+  checkGameOver();
+}
+
+getHumanChoice(playGame);
