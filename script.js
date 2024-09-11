@@ -7,6 +7,7 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+// Results of each outcome for each round
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === "rock" && computerChoice === "paper") {
     computerScore++;
@@ -38,6 +39,7 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+// Retrieve button press from the website, listen for user's choice
 function getHumanChoice(callback) {
   const buttons = document.querySelectorAll(".game-btn");
 
@@ -52,6 +54,7 @@ function getHumanChoice(callback) {
   });
 }
 
+// Disable button press after game has concluded
 function disableButtons() {
   const buttons = document.querySelectorAll(".game-btn");
 
@@ -60,6 +63,7 @@ function disableButtons() {
   });
 }
 
+// Check to see if the round limit has been reached, then end game
 function checkGameOver() {
   if (humanScore === 5) {
     disableButtons();
@@ -70,6 +74,7 @@ function checkGameOver() {
   }
 }
 
+// Round and 'game over' check is performed here to play game
 function playGame(userChoice, computerChoice) {
   const result = playRound(userChoice, computerChoice);
   console.log(result);
