@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rock, Paper, Scissors!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="button-container">
       <button class="game-btn" data-choice="rock">
-      <img src="images/rock.png" alt="Rock">
+        <img src="images/rock.png" alt="Rock" />
         <span>Rock</span>
-        </button>
+      </button>
       <button class="game-btn" data-choice="paper">
-      <img src="images/paper.png" alt="Paper">
+        <img src="images/paper.png" alt="Paper" />
         <span>Paper</span>
-        </button>
+      </button>
       <button class="game-btn" data-choice="scissors">
-      <img src="images/scissors.png" alt="Scissors">
+        <img src="images/scissors.png" alt="Scissors" />
         <span>Scissors</span>
-        </button>
+      </button>
+    </div>
+    <div id="scoreboard">
+      <p id="outcome"></p>
+      <p>User Score: <span id="user-score">0</span></p>
+      <p>Computer Score: <span id="computer-score">0</span></p>
     </div>
     <script src="script.js"></script>
   </body>
